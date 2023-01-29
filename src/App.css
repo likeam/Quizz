@@ -6,6 +6,8 @@
     flex-direction: column;
 }
 
+
+
 .Menu{
     width: 500px;
     height: 500px;
@@ -16,6 +18,7 @@
     justify-content: center;
     align-items: center;
 }
+
 .Menu input, button{
     width: 300px;
     height: 50px;
@@ -23,9 +26,14 @@
 
 }
 
+
+
 button:hover{
     cursor: pointer;
 }
+
+
+
 .Quiz{
     width: 500px;
     height: 500px;
@@ -36,3 +44,8 @@ button:hover{
     align-items: center;
     justify-content: center;
 }
+
+.Menu, .Quiz h1{
+    color: white;
+}
+

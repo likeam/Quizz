@@ -1,7 +1,7 @@
 export const Questions = [
     {
         prompt:"what is my name?",
-        optonA: "John",
+        optionA: "John",
         optionB: "Jake",
         optionC: "Josh",
         optionD: "Pedro",
@@ -9,7 +9,7 @@ export const Questions = [
     },
     {
         prompt:"which is this not a progromming language?",
-        optonA: "Phython",
+        optionA: "Phython",
         optionB: "JavaScript",
         optionC: "Mac",
         optionD: "Java",
