@@ -1,10 +1,14 @@
 import React from 'react'
+import { useContext } from 'react';
 import { useState } from 'react'
+import { GameStateContext } from '../Helper/Contats';
 import Questions from '../Helper/Questions'
 
 const Quiz = () => {
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [ optionChosen, setOptionChosen] = useState("");
+
+    const [score, setScore] = useContext(GameStateContext);
 
     const cohoseOption = (option) =>{
         setOptionChosen(option)
@@ -12,7 +16,7 @@ const Quiz = () => {
 
     const nextQuestion = () => {
         if(Questions[currentQuestion].answer === optionChosen){
-            console.log("Correct");
+            setScore(score + 1)
         }else{
             console.log("Wrong");
         }
@@ -28,6 +32,7 @@ const Quiz = () => {
                 <button onClick={() =>{cohoseOption('optionC')}}>{Questions[currentQuestion].optionC}</button>
                 <button onClick={() =>{cohoseOption('optionC')}}>{Questions[currentQuestion].optionD}</button>
             </div>
+            {score}
             <button onClick={nextQuestion}>Next Question</button>
         </div>
     )

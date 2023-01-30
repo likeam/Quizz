@@ -1,5 +1,4 @@
-import {createContext} from 'react'
+import {createContext} from 'react';
 
 
-
-export const GameStateContats = createContext("");
+export const GameStateContext = createContext("");

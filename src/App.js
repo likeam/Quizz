@@ -1,7 +1,7 @@
 import Menu from "./components/Menu";
 import "./App.css";
 import { useState } from "react";
-import { GameStateContats } from "./Helper/Contats";
+import { GameStateContext } from "./Helper/Contats";
 import Quiz from "./components/Quiz";
 
 
@@ -10,14 +10,15 @@ function App() {
 
   const [gameState, setGameState] = useState('menu');
   const [userName, setUserName] = useState('menu');
+  const [score, setScore] = useState(0);
 
   return (
     <div className="App">
         <h1>Quizz App</h1>
-        <GameStateContats.Provider value={{gameState, setGameState, userName, setUserName}}>
+        <GameStateContext.Provider value={{gameState, setGameState, userName, setUserName, score, setScore}}>
           {gameState === "menu" && <Menu />}
           {gameState === "playing" && <Quiz />}
-        </GameStateContats.Provider>
+        </GameStateContext.Provider>
         
     </div>
   );

@@ -1,10 +1,10 @@
 import React from 'react'
 import { useContext } from 'react'
-import { GameStateContats } from '../Helper/Contats'
+import { GameStateContext } from '../Helper/Contats'
 
 
 const Menu = () => {
-    const {gameState, setGameState, userName, setUserName} = useContext(GameStateContats)
+    const {gameState, setGameState, userName, setUserName} = useContext(GameStateContext)
     return (
         <div className='Menu'>
             <label >Enter Your Name</label>
